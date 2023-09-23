@@ -1,0 +1,16 @@
+(HeaderSettings
+	(C++HeaderDirectory "include")
+
+	(HeaderFile "libRaven.h" 
+		(library libRaven
+		    (name libRaven)
+			(debugName libRaven-dbg)
+			(dynamicSwitch IG_ALCHEMY_DLL)
+			
+			(readFiles (append
+				(fileNames "include/*.h")
+				(filterOut (fileNames "src/*.igo") "libRaven.igo")
+			))
+		)
+	)
+)

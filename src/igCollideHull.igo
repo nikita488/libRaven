@@ -1,0 +1,36 @@
+(HeaderFile "igCollideHull.h" 
+	(object Raven (namespace)
+		(object XMenSharedODL (namespace)
+			(object igCollideHull
+				(uses igFloatList)
+				(base (type (odlRef igInfo)))
+			
+				[field _mTriangles 
+					(public)
+					(type igFloatList)
+					(construct)
+					(autoget triangles (nonconst))
+				]
+				
+				[field _mNodes 
+					(public)
+					(type igFloatList)
+					(construct)
+					(autoget nodes (nonconst))
+				]
+				
+				[field _mNumTriangles 
+					(public)
+					(type igInt)
+					(autoget numTriangles)
+				]
+				
+				[field _mNumNodes 
+					(public)
+					(type igInt)
+					(autoget numNodes)
+				]
+			)
+		)
+	)
+)

@@ -1,0 +1,39 @@
+(HeaderFile "igGlobalColorStateAttr.h" 
+	(object Gap (namespace)
+		(object Attrs (namespace)
+			(object igGlobalColorStateAttr
+				[base (type igVisualAttribute)]
+				
+				[field _enabled (private) (type igBool) (value false)]
+				
+				(function
+					(public)
+					(virtual)
+					(c++declaration "void apply(igVisualContext* vc)")
+					(c++inline "{}")
+				)
+				
+				(function
+					(public)
+					(virtual)
+					(c++declaration "void setState(igBool enabled)")
+					(c++inline "{ _enabled = enabled; }")
+				)
+				
+				(function
+					(public)
+					(const)
+					(c++declaration "igBool getState()")
+					(c++inline "{ return _enabled; }")
+				)
+				
+				(function
+					(public)
+					(virtual)
+					(c++declaration "void synchronizeDefault(igVisualContext* vc)")
+					(c++inline "{}")
+				)
+			)
+		)
+	)
+)
