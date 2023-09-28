@@ -2,15 +2,34 @@
 	(object Gap (namespace)
 		(object Attrs (namespace)
 			(object igGlobalColorStateAttr
-				[base (type igVisualAttribute)]
+				(base (type igVisualAttribute))
+					(uses (odlRef Gfx igDxVisualContext))
+(c++members "
+public:
+	static Core::igStringRef stateName;
+	static igInt stateHandle;
+")
+
+				[field _enabled (type igBool) (private) (value false)]
 				
-				[field _enabled (private) (type igBool) (value false)]
+				(constructor userRegister)
+				(function
+					(public)
+					(static)
+					(c++declaration "void userRegister()")
+				)
+				
+				(destructor userUnregister)
+				(function
+					(public)
+					(static)
+					(c++declaration "void userUnregister()")
+				)
 				
 				(function
 					(public)
 					(virtual)
 					(c++declaration "void apply(igVisualContext* vc)")
-					(c++inline "{}")
 				)
 				
 				(function
@@ -31,7 +50,6 @@
 					(public)
 					(virtual)
 					(c++declaration "void synchronizeDefault(igVisualContext* vc)")
-					(c++inline "{}")
 				)
 			)
 		)
