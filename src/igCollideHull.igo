@@ -2,34 +2,12 @@
 	(object Raven (namespace)
 		(object XMenSharedODL (namespace)
 			(object igCollideHull
-				(uses igFloatList)
-				(base (type (odlRef igInfo)))
+				(base (type igInfo))
 			
-				[field _mTriangles 
-					(public)
-					(type igFloatList)
-					(construct)
-					(autoget triangles (nonconst))
-				]
-				
-				[field _mNodes 
-					(public)
-					(type igFloatList)
-					(construct)
-					(autoget nodes (nonconst))
-				]
-				
-				[field _mNumTriangles 
-					(public)
-					(type igInt)
-					(autoget numTriangles)
-				]
-				
-				[field _mNumNodes 
-					(public)
-					(type igInt)
-					(autoget numNodes)
-				]
+				[field _mTriangles (type igFloatList) (protected) (construct) (autoget triangles (const false)) (autoset triangles)]
+				[field _mNodes (type igFloatList) (protected) (construct) (autoget nodes (const false)) (autoset nodes)]
+				[field _mNumTriangles (type igInt) (protected) (autoget triangleCount) (autoset triangleCount)]
+				[field _mNumNodes (type igInt) (protected) (autoget nodeCount) (autoset nodeCount)]
 			)
 		)
 	)
